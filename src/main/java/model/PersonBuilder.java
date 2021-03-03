@@ -7,6 +7,9 @@ public class PersonBuilder {
     private String name;
     private List<String> phones;
 
+    PersonBuilder() {
+    }
+
     public PersonBuilder withId(Long id) {
         this.id = id;
         return this;
