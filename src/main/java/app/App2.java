@@ -1,14 +1,14 @@
 package app;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import dao.PersonRepository;
+import model.Person;
+import org.eclipse.jnosql.mapping.DatabaseQualifier;
 
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
-
-import dao.PersonRepository;
-import model.Person;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class App2 {
 
