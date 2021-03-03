@@ -1,11 +1,11 @@
 package dao;
 
-import java.util.Optional;
-import javax.inject.Inject;
-import jakarta.nosql.document.DocumentQuery;
 import jakarta.nosql.mapping.Database;
-import jakarta.nosql.mapping.document.DocumentTemplate;
+import jakarta.nosql.mapping.DatabaseType;
 import model.Person;
+
+import javax.inject.Inject;
+import java.util.Optional;
 
 
 public class PersonServiceRepository {

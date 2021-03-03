@@ -34,7 +34,7 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/jakarta.nosql.mapping/mapping-document -->
 		<dependency>
-		    <groupId>jakarta.nosql.mapping</groupId>
+			<groupId>org.eclipse.jnosql.mapping</groupId>
 		    <artifactId>mapping-document</artifactId>
 		    <version>1.0.0-b3</version>
 		</dependency>

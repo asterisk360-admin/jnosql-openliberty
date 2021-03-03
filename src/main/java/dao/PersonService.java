@@ -6,6 +6,8 @@ import jakarta.nosql.document.DocumentQuery;
 import jakarta.nosql.mapping.document.DocumentTemplate;
 import model.Person;
 
+import static jakarta.nosql.document.DocumentQuery.select;
+
 public class PersonService {
 
 	
