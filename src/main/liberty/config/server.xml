@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<server description="server">
+
+    <featureManager>
+		<feature>webProfile-8.0</feature>
+        <feature>mpRestClient-1.4</feature>
+        <feature>mpConfig-1.4</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="80" />
+    
+    <applicationManager autoExpand="true"/>
+
+</server>
