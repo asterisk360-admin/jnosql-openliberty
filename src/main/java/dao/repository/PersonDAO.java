@@ -1,4 +1,4 @@
-package dao;
+package dao.repository;
 
 import jakarta.nosql.mapping.Database;
 import jakarta.nosql.mapping.DatabaseType;
@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import java.util.Optional;
 
 
-public class PersonServiceRepository {
+public class PersonDAO {
 
 	@Inject
 	@Database(DatabaseType.DOCUMENT)

@@ -1,4 +1,4 @@
-package dao;
+package dao.normal;
 
 import java.util.Optional;
 import javax.inject.Inject;
@@ -8,7 +8,7 @@ import model.Person;
 
 import static jakarta.nosql.document.DocumentQuery.select;
 
-public class PersonService {
+public class PersonDAO {
 
 	
 	@Inject

@@ -17,7 +17,7 @@ import jakarta.nosql.document.DocumentConfiguration;
 
 
 @ApplicationScoped
-public class XProducer {
+public class Producer {
 
   private static final String COLLECTION = "developers";
   
