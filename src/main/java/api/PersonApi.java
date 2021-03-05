@@ -31,7 +31,7 @@ public class PersonApi {
 	@Path("/")
 	public Person savePerson(Person person) {
 		return personDAO.save(person);
-    }
+    	}
 	
 	
 	@GET
