@@ -25,3 +25,4 @@ public class DocumentProducer {
     public void destroy(@Disposes DocumentCollectionManager manager) {
         manager.close();
     }
+}
