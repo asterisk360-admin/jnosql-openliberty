@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>asterisk360.test</groupId>
+    <artifactId>jnosql</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+		<!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-web-api -->
+		<dependency>
+		    <groupId>jakarta.platform</groupId>
+		    <artifactId>jakarta.jakartaee-web-api</artifactId>
+		    <version>8.0.0</version>
+		    <scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.microprofile/microprofile -->
+        <dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>4.0.1</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+		
+		<!-- https://mvnrepository.com/artifact/jakarta.nosql.communication/communication-document -->
+		<dependency>
+		    <groupId>jakarta.nosql.communication</groupId>
+		    <artifactId>communication-document</artifactId>
+		    <version>1.0.0-b3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/jakarta.nosql.mapping/mapping-document -->
+		<dependency>
+		    <groupId>jakarta.nosql.mapping</groupId>
+		    <artifactId>mapping-document</artifactId>
+		    <version>1.0.0-b3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jnosql.mapping/mapping-document -->
+		<dependency>
+			<groupId>org.eclipse.jnosql.mapping</groupId>
+		    <artifactId>mapping-document</artifactId>
+		    <version>1.0.0-b3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jnosql.communication/mongodb-driver -->
+		<dependency>
+		    <groupId>org.eclipse.jnosql.communication</groupId>
+		    <artifactId>mongodb-driver</artifactId>
+		    <version>1.0.0-b3</version>
+		</dependency>
+	</dependencies>
+	
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+        	<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <version>3.3.1</version>
+			</plugin>
+            <!-- https://mvnrepository.com/artifact/io.openliberty.tools/liberty-maven-plugin -->
+			<plugin>
+			    <groupId>io.openliberty.tools</groupId>
+			    <artifactId>liberty-maven-plugin</artifactId>
+			    <version>3.3.4</version>
+			    <configuration>
+                    <copyDependencies>
+						<dependency>
+						    <groupId>jakarta.nosql.communication</groupId>
+						    <artifactId>communication-document</artifactId>
+						    <version>1.0.0-b3</version>
+						</dependency>
+						<dependency>
+						    <groupId>jakarta.nosql.mapping</groupId>
+						    <artifactId>mapping-document</artifactId>
+						    <version>1.0.0-b3</version>
+						</dependency>
+                        <dependency>
+                            <groupId>org.eclipse.jnosql.mapping</groupId>
+						    <artifactId>mapping-document</artifactId>
+						    <version>1.0.0-b3</version>
+                        </dependency>
+                        <dependency>
+           		   			<groupId>org.eclipse.jnosql.communication</groupId>
+						    <artifactId>mongodb-driver</artifactId>
+						    <version>1.0.0-b3</version>
+                        </dependency>
+                    </copyDependencies>
+                </configuration>
+			</plugin>
+        </plugins>
+    </build>
+
+</project>
